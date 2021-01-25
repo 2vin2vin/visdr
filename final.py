@@ -241,8 +241,9 @@ for i in f.iterrows():
 	#print(rv,rv1,rv2,rv3,rv4,rv5,rv6)
 	#img3,b=zoom_in(img3,zoom,rv,b)
 	cd=b
-	
-	name=name='./final_images/'+name.split('/')[-1]
-	cv2.imwrite(name,img3)
+	if name1!=name:
+		name='./final_images/'+name.split('/')[-1]
+		cv2.imwrite(name,img3)
+	name='./final_images/'+name.split('/')[-1]
 	out.write('{},{},{},{},{},{}\n'.format(name,cd[0],cd[1],cd[2],cd[3],cl))
 	#break
