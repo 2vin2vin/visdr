@@ -31,7 +31,7 @@ def main(_):
 
     for row in rows[1:]:
         row = row.split(",")
-        (imagePath, width, height, label, startX, startY, endX, endY) = row
+        (imagePath, startX, startY, endX, endY, label) = row
         (startX, startY) = (float(startX), float(startY))
         (endX, endY) = (float(endX), float(endY))
 
